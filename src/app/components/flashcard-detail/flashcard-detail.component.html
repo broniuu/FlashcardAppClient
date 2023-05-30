@@ -1,0 +1,19 @@
+<div class="alert alert-primary" role="alert">
+  {{flashcard.description}}
+</div>
+<div class="card-container">
+  <div class="flip-container" (click)="flipCard()">
+    <div class="flipper" [ngClass]="rotate ? 'flipper-rotate' : ''">
+      <div class="front">
+        {{flashcard.frontText}}
+      </div>
+      <div class="back">
+        {{flashcard.backText}}
+      </div>
+    </div>
+  </div>
+  <div>
+    <h1><span class="badge bg-info">Click on cart to flip</span></h1>
+  </div>
+</div>
+
