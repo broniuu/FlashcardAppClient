@@ -1,3 +1,4 @@
-<div *ngFor="let flashcard of flashcards$">
+<app-search-bar (name)="getName($event)"></app-search-bar>
+<div *ngFor="let flashcard of flashcards$ | filter:filterText">
   <app-flashcard [flashcard]="flashcard"></app-flashcard>
 </div>

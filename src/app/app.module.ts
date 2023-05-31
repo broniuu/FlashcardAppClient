@@ -10,6 +10,8 @@ import {ActivatedRoute, RouterModule, Routes} from "@angular/router";
 import { FlashcardDetailComponent } from './components/flashcard-detail/flashcard-detail.component';
 import {FlashcardService} from "./services/flashcard.service";
 import {FormsModule} from "@angular/forms";
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { FilterPipe } from './pipes/filter.pipe';
 const routes: Routes = [
   {
     path: '',
@@ -21,7 +23,9 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     FlashcardComponent,
-    FlashcardDetailComponent
+    FlashcardDetailComponent,
+    SearchBarComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Flashcard} from "../../models/flashcard";
 import {FlashcardService} from "../../services/flashcard.service";
-import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -9,6 +8,7 @@ import {Observable} from "rxjs";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
+  @Input() filterText: string = '';
   public flashcards$: Flashcard[] = [];
 
   constructor(private service: FlashcardService) {
@@ -22,5 +22,9 @@ export class HomeComponent implements OnInit{
     this.service.getAll().subscribe(flashcards => {
       this.flashcards$ = flashcards;
     });
+  }
+
+  getName($event: string): void {
+    this.filterText = $event;
   }
 }
