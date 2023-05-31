@@ -5,3 +5,10 @@ export interface Flashcard {
   description: string;
   id: string
 }
+
+export interface AddFlashcardDto {
+  frontText: string;
+  backText: string;
+  image: string;
+  description: string;
+}

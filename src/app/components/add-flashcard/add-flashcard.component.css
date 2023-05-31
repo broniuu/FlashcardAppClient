@@ -1,8 +1,7 @@
-.user-data-container {
+.add-flashcard-container {
   display: flex;
   justify-content: center;
 }
-
-.user-data-form {
+.add-flashcard-form {
   width: 30%;
 }

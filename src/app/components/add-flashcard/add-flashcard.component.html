@@ -1,0 +1,23 @@
+<div class="add-flashcard-container">
+  <form class="add-flashcard-form" action="post" autocomplete="off" method="POST">
+    <div class="mb-3">
+      <label class="form-label">Front text</label>
+      <input [(ngModel)]="flashcard.frontText" name="frontText" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Back text</label>
+      <input [(ngModel)]="flashcard.backText" name="backText" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Descrpition</label>
+      <textarea [(ngModel)]="flashcard.description" name="description" type="text" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Image</label>
+      <input [(ngModel)]="flashcard.image" name="image" type="text" class="form-control">
+    </div>
+    <button (click)="addFlashcard()" class="btn btn-outline-success" type="submit">
+      Add Flashcard
+    </button>
+  </form>
+</div>

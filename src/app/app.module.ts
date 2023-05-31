@@ -13,6 +13,10 @@ import {FormsModule} from "@angular/forms";
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ZoomDirective } from './directives/zoom.directive';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AddFlashcardComponent } from './components/add-flashcard/add-flashcard.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 const routes: Routes = [
   {
     path: '',
@@ -27,7 +31,11 @@ const routes: Routes = [
     FlashcardDetailComponent,
     SearchBarComponent,
     FilterPipe,
-    ZoomDirective
+    ZoomDirective,
+    NavbarComponent,
+    AddFlashcardComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Flashcard} from "../models/flashcard";
+import {AddFlashcardDto, Flashcard} from "../models/flashcard";
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class FlashcardService {
     return this.http.get<Flashcard>(`${this.flashcardsUrl}/${id}`);
   }
 
-  add(flashcard: Flashcard) {
+  add(flashcard: AddFlashcardDto) {
     return this.http.post(this.flashcardsUrl, flashcard);
   }
 }
