@@ -12,6 +12,7 @@ import {FlashcardService} from "./services/flashcard.service";
 import {FormsModule} from "@angular/forms";
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { ZoomDirective } from './directives/zoom.directive';
 const routes: Routes = [
   {
     path: '',
@@ -25,7 +26,8 @@ const routes: Routes = [
     FlashcardComponent,
     FlashcardDetailComponent,
     SearchBarComponent,
-    FilterPipe
+    FilterPipe,
+    ZoomDirective
   ],
   imports: [
     BrowserModule,

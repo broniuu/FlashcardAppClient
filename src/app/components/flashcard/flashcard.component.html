@@ -1,5 +1,5 @@
 <div class="card" style="width: 18rem;">
-  <img [src]="flashcard.image" alt="text">
+  <img [src]="flashcard.image" alt="text" appZoom>
   <h5 class="card-title">{{flashcard.frontText}}</h5>
   <p class="card-text">{{flashcard.description}}</p>
   <a href="#" class="btn btn-primary" [routerLink]="['/flashcard/' + flashcard.id]">Go to flashcard</a>
