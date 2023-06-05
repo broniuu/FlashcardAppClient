@@ -2,12 +2,12 @@
   <form class="user-data-form">
     <div class="mb-3">
       <label class="form-label">Login</label>
-      <input type="email" class="form-control" >
+      <input type="email" class="form-control" [(ngModel)]="credentials.login" name="login">
     </div>
     <div class="mb-3">
       <label class="form-label">Password</label>
-      <input type="password" class="form-control">
+      <input type="password" class="form-control" [(ngModel)]="credentials.password" name="password">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button (click)="singIn()" type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FlashcardComponent } from './components/flashcard/flashcard.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {ActivatedRoute, RouterModule, Routes} from "@angular/router";
 import { FlashcardDetailComponent } from './components/flashcard-detail/flashcard-detail.component';
 import {FlashcardService} from "./services/flashcard.service";
@@ -17,6 +17,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddFlashcardComponent } from './components/add-flashcard/add-flashcard.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { FlashcardsComponent } from './components/flashcards/flashcards.component';
+import {AuthService} from "./services/auth.service";
+import {AuthInterceptor} from "./services/auth.interceptor";
 const routes: Routes = [
   {
     path: '',
@@ -35,7 +38,8 @@ const routes: Routes = [
     NavbarComponent,
     AddFlashcardComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    FlashcardsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,15 @@ const routes: Routes = [
     FormsModule
   ],
   exports: [RouterModule],
-  providers: [FlashcardService],
+  providers: [
+    FlashcardService,
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

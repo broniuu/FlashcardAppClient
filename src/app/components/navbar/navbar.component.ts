@@ -8,6 +8,4 @@ import {Router} from "@angular/router";
 })
 export class NavbarComponent {
 
-  constructor(private router: Router) {
-  }
 }

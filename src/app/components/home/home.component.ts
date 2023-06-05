@@ -7,24 +7,6 @@ import {FlashcardService} from "../../services/flashcard.service";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit{
-  @Input() filterText: string = '';
-  public flashcards$: Flashcard[] = [];
+export class HomeComponent {
 
-  constructor(private service: FlashcardService) {
-  }
-
-  ngOnInit(): void {
-   this.getAll();
-  }
-
-  getAll(): void {
-    this.service.getAll().subscribe(flashcards => {
-      this.flashcards$ = flashcards;
-    });
-  }
-
-  getName($event: string): void {
-    this.filterText = $event;
-  }
 }

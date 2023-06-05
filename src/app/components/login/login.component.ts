@@ -20,7 +20,7 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {
   }
 
-  singIn(credentials: Credentials) {
+  singIn() {
     return this.authService.authenticate(this.credentials).subscribe((result) => {
       if (!result) {
         this.logged = false;
