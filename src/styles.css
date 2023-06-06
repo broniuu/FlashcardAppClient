@@ -6,3 +6,9 @@
 .user-data-form {
   width: 30%;
 }
+
+.buttons-panel {
+  display: flex;
+  justify-content: space-between;
+  background-color: #a2c8ff;
+}

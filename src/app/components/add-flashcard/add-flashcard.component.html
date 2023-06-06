@@ -10,14 +10,22 @@
     </div>
     <div class="mb-3">
       <label class="form-label">Descrpition</label>
-      <textarea [(ngModel)]="flashcard.description" name="description" type="text" class="form-control"></textarea>
+      <textarea [(ngModel)]="flashcard.description" name="description" type="text" class="form-control" appAutoGrow></textarea>
     </div>
     <div class="mb-3">
       <label class="form-label">Image</label>
       <input [(ngModel)]="flashcard.image" name="image" type="text" class="form-control">
     </div>
-    <button (click)="addFlashcard()" class="btn btn-outline-success" type="submit">
-      Add Flashcard
-    </button>
+    <div>
+
+    </div>
+    <div class="buttons-panel">
+      <button (click)="addFlashcard()" class="btn btn-outline-success" type="submit">
+        Add Flashcard
+      </button>
+      <button class="btn btn-outline-danger" type="submit" href="#" [routerLink]="['/']">
+        Go back
+      </button>
+    </div>
   </form>
 </div>

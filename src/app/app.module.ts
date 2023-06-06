@@ -21,6 +21,7 @@ import { FlashcardsComponent } from './components/flashcards/flashcards.componen
 import {AuthService} from "./services/auth.service";
 import {AuthInterceptor} from "./services/auth.interceptor";
 import { UpdateFlashcardComponent } from './components/update-flashcard/update-flashcard.component';
+import {AutoGrowDirective} from "./directives/auto-grow.directive";
 const routes: Routes = [
   {
     path: '',
@@ -41,7 +42,8 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     FlashcardsComponent,
-    UpdateFlashcardComponent
+    UpdateFlashcardComponent,
+    AutoGrowDirective
   ],
   imports: [
     BrowserModule,
