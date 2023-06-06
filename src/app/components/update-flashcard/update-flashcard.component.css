@@ -1,0 +1,7 @@
+.add-flashcard-container {
+  display: flex;
+  justify-content: center;
+}
+.add-flashcard-form {
+  width: 30%;
+}

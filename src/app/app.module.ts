@@ -20,6 +20,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { FlashcardsComponent } from './components/flashcards/flashcards.component';
 import {AuthService} from "./services/auth.service";
 import {AuthInterceptor} from "./services/auth.interceptor";
+import { UpdateFlashcardComponent } from './components/update-flashcard/update-flashcard.component';
 const routes: Routes = [
   {
     path: '',
@@ -39,7 +40,8 @@ const routes: Routes = [
     AddFlashcardComponent,
     LoginComponent,
     RegisterComponent,
-    FlashcardsComponent
+    FlashcardsComponent,
+    UpdateFlashcardComponent
   ],
   imports: [
     BrowserModule,

@@ -7,15 +7,15 @@ import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {AuthGuard} from "./services/auth.guard";
 import {FlashcardsComponent} from "./components/flashcards/flashcards.component";
+import {UpdateFlashcardComponent} from "./components/update-flashcard/update-flashcard.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    pathMatch: 'full'
+    component: HomeComponent
   },
   {
-    path: 'flashcard',
+    path: 'flashcards',
     component: FlashcardsComponent,
     canActivate: [AuthGuard]
   },
@@ -27,6 +27,11 @@ const routes: Routes = [
   {
     path: 'add-flashcard',
     component: AddFlashcardComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'edit-flashcard/:id',
+    component: UpdateFlashcardComponent,
     canActivate: [AuthGuard]
   },
   {

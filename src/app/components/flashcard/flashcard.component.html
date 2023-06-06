@@ -3,4 +3,5 @@
   <h5 class="card-title">{{flashcard.frontText}}</h5>
   <p class="card-text">{{flashcard.description}}</p>
   <a href="#" class="btn btn-primary" [routerLink]="['/flashcard/' + flashcard.id]">Go to flashcard</a>
+  <a href="#" class="btn btn-secondary" [routerLink]="['/edit-flashcard/' + flashcard.id]">Edit flashcard</a>
 </div>

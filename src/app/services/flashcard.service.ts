@@ -20,4 +20,8 @@ export class FlashcardService {
   add(flashcard: AddFlashcardDto) {
     return this.http.post(this.flashcardsUrl, flashcard);
   }
+
+  update(flashcard: Flashcard) {
+    return this.http.put(this.flashcardsUrl, flashcard);
+  }
 }

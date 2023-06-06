@@ -20,7 +20,7 @@ export class SearchBarComponent implements OnInit{
 
   sendFilter(): void {
     this.name.emit(this.filterText);
-    this.router.navigate([''], {
+    this.router.navigate(['flashcards'], {
       queryParams: {name: this.filterText}
     });
   }
