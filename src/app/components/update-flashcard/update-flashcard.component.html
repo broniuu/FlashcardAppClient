@@ -16,9 +16,9 @@
       <label class="form-label">Image</label>
       <input [(ngModel)]="flashcard.image" name="image" type="text" class="form-control">
     </div>
-    <div class="buttons-panel">
+    <div class="buttons-panel" >
       <button (click)="updateFlashcard()" class="btn btn-outline-success" type="submit">
-        Add Flashcard
+        Update Flashcard
       </button>
       <button href="#" class="btn btn-outline-danger" type="submit" [routerLink]="['/flashcards']">
         Go back
